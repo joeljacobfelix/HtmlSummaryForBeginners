@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Tables</title>
+        <link rel="stylesheet" href="design.css">
+    </head>
+    <body>
+        <section id="table1">
+            <!--we can make css tables but you know its good to know html tables-->
+            <table>
+                <tr>
+                    <th>S.no</th>                
+                    <th>Roll No.</th>            
+                    <th>Name</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>2134</td>
+                    <td>Joel Jacob Felix</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td rowspan="2"><mark>expelled</mark></td>
+                    <td rowspan="2"><mark>expelled</mark></td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>1111</td>
+                    <td>Keashab Nath</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td colspan="2"><mark>LEFT THE COLLEGE</mark></td>
+                </tr>
+            </table>
+        </section>
+        
+        <hr>
+
+        <section id="Table2"><!--Same table as above but with semantic elements-->
+            <table>
+                <caption>This is the same table as above but with caption</caption><!--SEMANTIC-->
+                <thead><!--SEMANTIC-->
+                    <tr>
+                        <th>S.no</th>                
+                        <th>Roll No.</th>            
+                        <th>Name</th>
+                    </tr>
+                    
+                </thead>
+
+                <tbody><!--SEMANTIC-->
+                    <tr>
+                        <td>1</td>
+                        <td>2134</td>
+                        <td>Joel Jacob Felix</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td rowspan="2"><mark>expelled</mark></td>
+                        <td rowspan="2"><mark>expelled</mark></td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>1111</td>
+                        <td>Keashab Nath</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td colspan="2"><mark>LEFT THE COLLEGE</mark></td>
+                    </tr>
+                </tbody>
+
+                <tfoot><!--SEMANTIC-->
+                    <tr>
+                        <td colspan="3">
+                            the semantic tfooter can also be used
+                        </td>
+                    </tr>
+                </tfoot>
+            </table>
+
+            <br>
+            <!--the th tag can also be used for headers starting from the left as in timetable unlike the above table where there is only th element above. Also in the upcoming table we will see how "scope" tell that in which side headers point to .-->
+            <section id="table 3">
+                <table>
+                    <caption>My Daily Schedule</caption>
+                    <thead>
+                        <tr>
+                            <td>&nbsp;</td>
+                            <th scope="col">Time</th>
+                            <th scope="col">Activity</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">Morning</th>
+                            <td id="time"><time datetime="08:00">8am</time>-<time datetime="11:00">11am</time></td>
+                            <td>write code</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">break</th>
+                            <td><time datetime="11:00">11am</time>-<time datetime="12:00">12pm</time></td>
+                            <td>Eat Lunch</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Afternoon</th>
+                            <td><time datetime="12:00">12pm</time>-<time datetime="17:00">5pm</time></td>
+                            <td>Study for other courses</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Evening</th>
+                            <td rowspan="2">All other times</td>
+                            <td>Free Time</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Night</th>
+                            <td>Sleep</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="3">
+                                And that is pretty much it
+                            </td>
+                        </tr>
+                        
+                    </tfoot>
+                </table>
+            </section>
+            
+            
+        </section>
+    </body>
+</html>
+
+
+
+
+

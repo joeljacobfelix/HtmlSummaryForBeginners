@@ -1,0 +1,16 @@
+h2{
+    text-transform: capitalize;
+}
+section{
+    Font-size: 50px;
+}
+
+a{
+    color:orange;
+}
+a:hover, a:active{
+    color:green;
+}
+a:visited{
+    color:purple;
+}

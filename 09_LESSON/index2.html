@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Tags</title>
+</head>
+<body>
+    <article id="contact">
+        <h2>Contact Me!!</h2>
+        <p>I'd really like to come to you!</p>
+
+        <form action="https://httpbin.org/get" method="get">
+            <fieldset><!--makes for =m into different section by getting those sectons into visible boxes with caption about the box provided by the legend tag (see the webpage)-->
+                <legend>Personal Details and favorite coffee</legend>
+                <!--p tag here is to keep it clean....it gives more meaning here than div-->
+                <p>
+                    <label for="firstName">First Name:</label>
+                    <input type="text" name="firstName" 
+                    id="firstName" placeholder="Eg: JOEL" 
+                    autocomplete="on" required autofocus><!--required makes it necessary for the user to enter tha name and autofocus automatically brings the cursor to the text field of this input tag-->
+                    <!--"id" attribute of the input tag needs to match with "for" attribute (in this case the value firstName)-->
+                    <!--the "name" attribute of the input tag also has the same value. What the name does is it makes the i0nput to be identified as the value that has been given to the name attribute in the server level (i.e whatever is inputed will be identified as firstName in this case) -->
+                </p>
+
+                <p>
+                    <label for="lasttName">Last Name:</label>
+                    <input type="text" 
+                    name="lasttName" id="lastName" 
+                    placeholder="Eg: Jacob Felix" 
+                    autocomplete="on" required>
+                </p>
+
+                <p>
+                    <label for="Password">Password:</label>
+                    <input type="password" name="Password" 
+                    id="Password" placeholder="Should have atleast 8 charecters" 
+                    required>
+                </p>
+
+                <p>
+                    <label for="phone">Mob. No.:</label>
+                    <input type="number" name="phone" id="Password" 
+                    placeholder="+911234567890" 
+                    pattern="+[9]{1}[1]{1}[0-9]{10}" required>
+                    <!--here type="tel" is used instead of type="number" because it brings arrows and all and we didn't type="text" since we want number
+                    The other advamtage of using type="tel" is that it shows nummeric keypad on mobile devices rather than alpha-numeric-->
+                </p>
+
+                <p>
+                    <label for="decade">Favorite Decade:</label>
+                    <input type="number" name="decade" 
+                    id="decade" placeholder="2000" min="1950"
+                    max="2022" step="10" value="1980">
+                    <!--step skips that many numbers between two numbers and value="1980" here makes the first value to be 1980-->
+                </p>
+
+                <!--select tag-->
+                <p>
+                    <label for="coffee1">Favorite Coffee:</label>
+                    <select name="coffee1" id="coffee1">
+
+                        <option value="regular coffee">Regular Coffee</option>
+                        <option value="iced coffee">Iced Coffee</option>
+                        <option value="cappiccino">Capiccino</option>
+                        <option value="cortado">Cortado</option>
+                        <option value="american">Americano</option>
+                        <option value="Latte" selected>Latte</option>
+                        <option value="others">Others</option>
+                    </select>
+                    <!--In the upcoming select tag of the same options and purpose,even though we know that it is organised,we can make subtopics inside the selection by using optgroup tag ,so that the user could choose faster and maybe more accurately-->
+                </p>
+
+                <br>
+                <p>
+                    <!--Also we can also select multiple from this tag by adding the attribute "multiple" with its size written-->
+                    <label for="coffee2">Favorite Coffee:</label>
+                    <select name="coffee2" id="coffee2" multiple size="5">
+                        <optgroup label="Normal Coffees">
+                            <option value="regular coffee">Regular Coffee</option>
+                            <option value="iced coffee">Iced Coffee</option>
+                        </optgroup>
+                        <optgroup label="Expresso Drinks">
+                            <option value="cappiccino">Capiccino</option>
+                            <option value="cortado">Cortado</option>
+                            <option value="american">Americano</option>
+                            <option value="Latte" selected>Latte</option>
+                        </optgroup>
+                        <option value="others">Others</option>
+                    </select>
+                </p>
+
+                <!--Another type of selecting is giving "input" tag the attribute "list" and the datalist like the one given below-->
+                <p>
+                    <label for="coffee">Favorite Coffee</label>
+                    <input type="text" name="coffee" id="coffee" list="coffee-list">
+                    <datalist id="coffee-list">
+                        <option value="coffee">
+                        <option value="latte">
+                        <option value="espresso">
+                        <option value="cortado">
+                        <option value="americano">
+                        <option value="other">                    
+                    </datalist>
+                </p>
+            </fieldset>
+            <br>
+            <fieldset>
+                <legend>What is your favorite food?</legend>
+                <p>
+                    <input type="radio" name="food" id="tacos" value="tacos">
+                    <label for="tacos">Tacos</label>
+                </p>
+                <p>
+                    <input type="radio" name="food" id="dosa" value="dosa">
+                    <label for="dosa">Dosa</label>
+                </p>
+                <p>
+                    <input type="radio" name="food" id="pizza" value="pizza">
+                    <label for="Pizza">Pizza</label>
+                </p>
+                <p>
+                    <input type="radio" name="food" id="steak" value="steak">
+                    <label for="steak">Steak</label>
+                </p>
+                <p>
+                    <input type="radio" name="food" id="other" value="other">
+                    <label for="other">Other</label>
+                </p>
+            </fieldset>
+
+            <fieldset>
+                <legend>Do you Have Pets?</legend>
+                <p>
+                    <input type="checkbox" name="pets" id="dog" value="dog">
+                    <lable for="dog">Dog</lable>
+                </p>
+                <p>
+                    <input type="checkbox" name="pets" id="cat" value="cat">
+                    <lable for="cat">Cat</lable>
+                </p>
+                <p>
+                    <input type="checkbox" name="pets" id="fish" value="fish">
+                    <lable for="fish">Fish</lable>
+                </p>
+                <p>
+                    <input type="checkbox" name="pets" id="other" value="other">
+                    <lable for="other">Other</lable>
+                </p>
+            </fieldset>
+
+            <!--textarea tag-->
+            <fieldset>
+                <legend>A Message to the coffee making and pet keeping company</legend>
+                <label for="message">Your Message</label>
+                <br>
+                <textarea name="message" id="message" cols="30" rows="10" placeholder="Type your message here"></textarea>
+                <!--It is better not to write anything between the opening and closing tags of "textarea" since what ever written 
+                    inside the opening and closing tags will become the values inside. Instead if we wanna tell something to the user before 
+                    writing into the textarea, it is better to go for the placeholder attribute-->
+            </fieldset>
+
+            <br>
+            <!--there are two different ways of putting a button-->
+            <!--1st is using "input" and other is using the "button tag"-->
+            &nbsp;<input type="submit">
+            <!--OR-->
+            <br>
+            &nbsp;<button type="submit">Submit</button>
+            <!--Inside of a button element, we could put more stuff, so we prefer that-->
+            <!--button is more semantic-->
+            <!--Button to reset-->
+            <button type="reset">Reset</button>
+
+            <button type="submit" formaction="https://httpbin.org/post" formmethod="post">Post</button>
+            <!--post is used to send data to the server and is more private than the get method whereas the get method recieves from the server-->
+
+        </form>
+
+    </article>
+    
+</body>
+</html>

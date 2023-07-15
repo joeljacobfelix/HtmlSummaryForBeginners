@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Images</title>
+        <meta name="description" content="About Images">
+        <!--It is a common practice to create a separate folder fot images with the name img....it is not necessary-->
+    </head>
+    <body>
+        <h1>HTML LOGO</h1>
+        <img src="img/html_logo.png" alt="Html Logo"/>
+        <img src="img/html_logo.png" alt="Html Logo" title="MESSAGE:The image in the left can't do this when hovering above it."/>
+        <img src="img/html_logo.png" alt="Html Logo" width="256" height="256"/>
+        <!--RECOMENTED TO PUT THE WIDTH AND SIZE CUZ IT GIVES AN IDEA TO THE BROWSER SBOUT THE ICOMING SIZE OR THE SIZE WE WISH IT TO BECOME
+        COULD CHANGE IT WITH CSS THO-->
+        
+        <hr>
+
+        <figure>
+            <!--tHE FIGURE ELEMENT TELLS THE BROWSER THAT THE UPCOMING CAPTION BELONGS TO THE IMAGE-->
+            <!--IT ALSO INTENDS THE IMAGE A BIT-->
+            
+            <img src="img/carribean.jpg" alt="Caribbean beach" title="evening 5'o clock Carribean beach" loading="lazy"/>
+            <!--When we put the loading attribute and the value "lazy" to it, the image won't load into the cache until we scroll closer to it.It is not like we have to reach the top of the image for it to load, when we reach close enough, the image loads "-->
+            <!--This is good since in a page of many photos ,say 50+, we dont have to load each and every photos since it takes more loading time-->
+
+            <figurecaption>
+                Caribbean beach:-One of the most beutiful beaches in the world
+            </figurecaption>
+            <!--It is better since writing under the image using p works but it technically it is just another ordinary line for html unlike figure caption-->
+        </figure>
+        
+        
+        <figure>
+            <img src="img/vacation.jpg" alt="Vacation" width="284" height="177" loading="lazy"/>
+            <figurecaption>
+                Vacation
+            </figurecaption>
+        </figure>
+
+        <!--figure is not only for images-->
+        <figure>
+            <figurecaption>
+                An example of HTML code
+            </figurecaption>
+            <p>
+                <!--code tags helps display code...CAN'T use any other html tags inside it-->
+                <code>
+                    &lt;h1&gt;Hello World&lt;/h1&gt;
+                </code>
+            </p>
+        </figure>
+    </body>
+</html>
+<!--Image Generators
+1)placeholder
+2)Unsplash
+3)Pexels
+4)Gratisography
+5)pixabay
+6)IrfanView
+7)canvas(some technologies in this requires payment)-->
